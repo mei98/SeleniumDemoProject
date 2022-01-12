@@ -25,7 +25,7 @@ class PythonOrgSearch(unittest.TestCase):
         element = driver.find_element(By.CSS_SELECTOR, "#myFile")
         element.send_keys("C://Users/meimei/Desktop/background/Eren.jpg")
         fileName = driver.find_element(By.CSS_SELECTOR,"#myFile").get_attribute('value') 
-        print(fileName) 
+        # print(fileName) 
         assert "Eren.jpg" in fileName
     
     def tearDown(self):
