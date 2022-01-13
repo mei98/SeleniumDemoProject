@@ -1,5 +1,5 @@
 '''
-Created on 11 thg 1, 2022
+Created on 13 thg 1, 2022
 
 @author: meimei
 '''
@@ -22,17 +22,23 @@ class PythonOrgSearch(unittest.TestCase):
         driver.get("https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm")
         print(driver.title)
         
-        #click to open new tab
-        newtab = driver.find_element(By.CSS_SELECTOR, "#content > div.post > p:nth-child(4) > input[type=button]:nth-child(2)")
-        newtab.click()
+        #click to open new window
+        newwindow = driver.find_element(By.CSS_SELECTOR, "#content > div.post > p:nth-child(4) > input[type=button]:nth-child(1)")
+        newwindow.click()
         time.sleep(2)
         
-        #shift the tab control to the 2nd tab
+        #shift the control to the 2nd window
         driver.switch_to.window(driver.window_handles[1])
         print(driver.title)
         time.sleep(2)
-        #shift the tab control to the origin tab
+        
+        #shift the control to the origin window
         driver.switch_to.window(driver.window_handles[0])
+        print(driver.title)
+        time.sleep(2)
+        
+        #shift the control to the 2nd window
+        driver.switch_to.window(driver.window_handles[1])
         print(driver.title)
         time.sleep(2)
 
