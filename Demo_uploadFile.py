@@ -3,7 +3,6 @@ Created on 10 thg 1, 2022
 
 @author: meimei
 '''
-import time
 import unittest
 
 from selenium import webdriver
@@ -12,7 +11,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class PythonOrgSearch(unittest.TestCase):
+class UploadFile(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))

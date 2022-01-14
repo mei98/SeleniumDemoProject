@@ -12,7 +12,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class PythonOrgSearch(unittest.TestCase):
+class PopoutWindow(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
