@@ -17,7 +17,7 @@ class PythonOrgSearch(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-    def test_upload_file(self):
+    def test_popout(self):
         driver = self.driver
         driver.get("https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm")
         print(driver.title)

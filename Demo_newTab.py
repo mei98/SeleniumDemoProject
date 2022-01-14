@@ -17,7 +17,7 @@ class PythonOrgSearch(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-    def test_upload_file(self):
+    def test_new_tab(self):
         driver = self.driver
         driver.get("https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm")
         print(driver.title)
@@ -26,7 +26,7 @@ class PythonOrgSearch(unittest.TestCase):
         newtab = driver.find_element(By.CSS_SELECTOR, "#content > div.post > p:nth-child(4) > input[type=button]:nth-child(2)")
         newtab.click()
         time.sleep(2)
-        
+                
         #shift the tab control to the 2nd tab
         driver.switch_to.window(driver.window_handles[1])
         print(driver.title)

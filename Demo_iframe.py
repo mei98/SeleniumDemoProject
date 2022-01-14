@@ -17,7 +17,7 @@ class PythonOrgSearch(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-    def test_upload_file(self):
+    def test_iframe(self):
         driver = self.driver
         driver.get("https://www.w3schools.com/html/html_iframe.asp")
         self.assertIn("Iframes", driver.title)
