@@ -32,7 +32,7 @@ class TestLinksAPI(unittest.TestCase):
             tag_links[index].click()
             
             try:
-                r = requests.get(driver.current_url)
+                r = requests.get(driver.current_url, timeout = 10)
                 assert 200 == r.status_code
                 count += 1
             except requests.exceptions.Timeout:
@@ -40,7 +40,7 @@ class TestLinksAPI(unittest.TestCase):
             except AssertionError:
                 print("Fail at "+str(index+1)+" link")
         
-        print("Pass "+ str(count) + " links in total")
+        print("Pass "+ str(count) + "/"+ str(len(tag_links))+" links")
         
     def tearDown(self):
         self.driver.close()
